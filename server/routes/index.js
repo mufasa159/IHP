@@ -1,7 +1,7 @@
 const express = require('express');
 const db = require('../db');
 
-const router = express.router();
+const router = express.Router();
 
 router.get('/', async (reg, res, next) => {
 
@@ -12,4 +12,6 @@ router.get('/', async (reg, res, next) => {
         console.log(e);
         res.sendStatus(500);
     }
-})
+});
+
+module.exports = router;
